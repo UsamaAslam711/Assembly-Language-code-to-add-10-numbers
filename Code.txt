@@ -1,0 +1,23 @@
+.data 
+
+num1 dword 1,2,3,4,5,6,7,8,9,10 
+
+.code 
+
+main proc 
+
+mov edi,offset num1 
+
+mov ecx,lengthof num1 
+
+mov eax,0 
+
+l1: 
+
+add eax,[edi] 
+
+add edi,4 
+
+sub ecx,1 
+
+jnz l1 
